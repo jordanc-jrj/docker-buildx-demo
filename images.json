@@ -1,0 +1,27 @@
+{
+  "group": {
+    "default": {
+      "targets": [
+        "apple"
+      ]
+    }
+  },
+  "target": { 
+    "apple": {
+      "platform": [
+        "linux/amd64"
+      ],
+      "context": ".",
+      "dockerfile": "Dockerfile",
+      "cache-from": [
+        "type=local,src=./cache/apple"
+      ],
+      "cache-to": [
+        "type=local,mode=max,dest=./cache/apple"
+      ],
+      "tags": [
+        "apple"
+      ]
+    }
+  }
+}
